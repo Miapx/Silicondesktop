@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --color-primary: #6366F1;
+    --color-white: #fff;
+    --color-grey900: #0B0F19;
+    --color-grey800: #33354D;
+    --color-grey600: #9397AD;
+    --color-grey300: #E2E5F1;
+    --color-grey700: #565973;
+    --container-padding: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+} 
+
+body, section, div, header, footer, main, aside, nav, blockquote, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.grad {
+    background: rgb(99,102,241);
+    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.1) 83%);
+}
+
+.container {
+    width: 100%;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .container {
+    max-width: 1320px;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    /* grid-template-areas: "logo navbar btn-toggle-switch auth-signin"; */
+    gap: 3rem;
+    align-items: center;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.nav-link {
+    color: var(--color-grey900);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-grey600);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.btn-primary i {
+    margin-right: 0.5rem;
+}
+ /* googleplay / appstore knapparna */
+
+ .btn-download-app {
+    background-color: var(--color-grey900);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-download-app:hover {
+    background-color: var(--color-grey600);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+ /* slut googleplay / appstore knappar */
+
+
+/* discover-more rund knapp */
+
+.btn-circle {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-grey800);
+    background-color: var(--color-white);
+    color: var(--color-grey900);
+}
+
+/* slut discover-more rund knapp */
+
+
+
+
+/* start darkmode-toggle */
+
+.btn-toggle-switch {
+display: flex;
+gap: 1rem;
+}
+
+.toggle-switch {
+    --_w: 46px;
+    --_h: 24px;
+
+    width: var(--_w);
+    height: var(--_h);
+    display: inline-block;
+    position: relative;
+
+    input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    /* skapar outlines på markerat objekt när man tabbar */
+    input[type="checkbox"]:focus-visible + .slider {
+        outline: 1px solid rebeccapurple;
+        outline-offset: 2px;
+    }
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-grey600);
+    border-radius: 100vw;
+    cursor: pointer;
+    }
+
+.slider::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    transform: translateZ(-50%);
+    height: 80%;
+    aspect-ratio: 1;
+    background-color: var(--color-white);
+    border-radius: 50%;
+
+    transition: all 400ms;
+
+    }
+
+    input[type="checkbox"]:checked ~ .slider::before {
+        left: calc(100% - var(--_h));
+        background-color: var(--color-primary);
+
+    }
+
+    input[type="checkbox"]:checked ~ .slider {
+        background-color: hsl(from var(--color-primary) h calc(s /2) calc(l + 15 ));
+    }
+}
+/* slut på darkmode-toggle */
+
+
+
+
+#hero {
+    /* background: rgb(99,102,241);
+    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.1) 83%); */
+    overflow: hidden;
+    padding-bottom: 0;
+
+    .container {
+        max-width: 1320px;
+        display: grid;
+        /* gap: 4rem; minskar images */
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas:    "content images"
+                                "content images";
+    }
+
+    .content {
+    grid-area: content;
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 2rem;
+        }
+
+
+    .buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .discover-more {
+        color: var(--color-grey700);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+    }
+}
+
+    .images {
+        grid-area: images;
+        position: relative;
+
+        .img-back {
+            position: absolute;
+            z-index: -10;
+            bottom: -40px;
+            right: 230px;
+            width: auto;
+        }
+
+        .img-front {
+            position: absolute;
+            z-index: -5;
+            bottom: -60px;
+            right: 0;
+            width: auto;
+        }
+    }
+}
+
+
+
+
+
+
+
+#brands {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .container {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.brand-box {
+    border: 1px solid var(--color-grey300);
+    border-radius: 8px;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    font-size: 14px;
+    padding-top: var(--container-padding);
+    padding-bottom: var(--container-padding);
+    color: var(--color-grey600);
+
+    .container {
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
