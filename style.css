@@ -8,6 +8,7 @@
     --color-grey600: #9397AD;
     --color-grey300: #E2E5F1;
     --color-grey700: #565973;
+    --color-grey100: #F3F6FF;
     --container-padding: 1rem;
 }
 
@@ -364,6 +365,47 @@ gap: 1rem;
     }
 
 }
+}
+
+#pagethree {
+    background-color: var(--color-grey100);
+    display: grid;
+    grid-template-areas: "heading"
+                            "carousel"
+                            "undercarousel";
+    color: var(--color-grey900);
+
+    h1 {
+        grid-template-areas: "heading";
+        font-size: 40px;
+        text-align: center;
+        padding: 3rem;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+
+    p {
+       color: var(--color-grey700);
+       font-size: 16px; 
+    }
+
+    .carousel {
+        grid-area: "carousel";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .undercarousel {
+        grid-template-areas: "undercarousel";
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+    }
 }
 
 
