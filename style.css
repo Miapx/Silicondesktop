@@ -55,7 +55,6 @@ header .container {
     margin-right: auto;
     display: grid;
     grid-template-columns: auto 1fr auto auto;
-    /* grid-template-areas: "logo navbar btn-toggle-switch auth-signin"; */
     gap: 3rem;
     align-items: center;
 }
@@ -417,9 +416,9 @@ gap: 1rem;
     /* grid-template-rows: 1fr 1fr; */
     grid-template-areas:    "moneytransfer imagestransfer"
                             "imagespayment moneypaymenttext";
-    padding: 5rem;
-    max-width: 1320px;
-    gap: 5rem;
+    padding: 7rem;
+    max-width: 1400px;
+    gap: 10rem;
     margin-bottom: 3rem;
     }
 
@@ -430,7 +429,7 @@ gap: 1rem;
 
     .moneytransfertext {
         grid-area: "moneytransfer";
-        padding: 3rem;
+        /* padding: 3rem; */
     }
 
 .checkmark {
@@ -463,7 +462,7 @@ a {
         .imagefront {
             position: absolute;
             z-index: -5;
-            bottom: -10px;
+            bottom: -90px;
             left: 190px;
         }
     }
@@ -501,15 +500,75 @@ a {
     .featurebox {
         .icon {
             background-color: hsl(240, 48%, 95%);
-            padding: 1em;
+            padding: 1rem;
             border-radius: 8px;
             margin-bottom: 1rem;
         }
     }
-
 }
 
+#pagefive {
+    background-color: var(--color-grey100);
+    padding: 5rem 0;
 
+    .container {
+        max-width: 1400px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+    }
+
+    .headtext {
+        font-size: 35px;
+        font-weight: 800;
+    }
+
+    .reviews {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .reviewbox {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+        position: relative;
+        color: var(--color-grey700);
+        font-size: 18px;
+
+        .quotes {
+            position: absolute;
+            top: -20px;
+        }
+
+        .ratings {
+            padding-top: 2rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    .clientinfo {
+        display: flex;
+        gap: 1rem;
+        padding-top: 1rem;
+
+
+    }        
+    .clientrating {
+            color: var(--color-grey600);
+            padding-bottom: 1rem;
+        }
+
+        .clientname {
+            font-weight: 700;
+            color: var(--color-grey900);
+        }
+
+        .clientrole {
+            color: var(--color-grey600);
+            font-size: 14px;
+        }
+}
 
 
 
