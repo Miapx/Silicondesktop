@@ -753,7 +753,7 @@ position: relative;
     border: 1px solid var(--color-grey400);
     color: var(--color-grey500);
 
-    /* använd fot-family fontawesome om du använder unicode (&#xf0e0; ) för envelope */
+    /* använd font-family fontawesome om du använder unicode (&#xf0e0; ) för envelope */
     /* font-family: sans-serif, FontAwesome; */
 
     &:focus {
