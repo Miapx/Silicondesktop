@@ -6,6 +6,7 @@
     --color-grey900: #0B0F19;
     --color-grey800: #33354D;
     --color-grey600: #9397AD;
+    --color-grey500: #B4B7C9;
     --color-grey300: #E2E5F1;
     --color-grey400: #D4D7E5;
     --color-grey700: #565973;
@@ -32,8 +33,6 @@ body {
 }
 
 .wrapper {
-    /* display: grid; */
-    /* grid-template-rows: auto 1fr auto; */
     height: 100vh;
 }
 
@@ -232,44 +231,49 @@ gap: 1rem;
             font-size: 18px;
             margin-bottom: 2rem;
         }
-
-
-    .buttons {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .discover-more {
-        color: var(--color-grey700);
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 10rem;
-        margin-bottom: 4rem;
     }
 }
 
-    .images {
-        grid-area: images;
-        position: relative;
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
 
-        .img-back {
-            position: absolute;
-            z-index: -10;
-            bottom: -40px;
-            right: 230px;
-            width: auto;
-        }
+.discover-more {
+    color: var(--color-grey700);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
 
-        .img-front {
-            position: absolute;
-            z-index: -5;
-            bottom: -60px;
-            right: 0;
-            width: auto;
-        }
+.content a {
+    text-decoration: none;
+}
+
+.images {
+    grid-area: images;
+    position: relative;
+
+    .img-back {
+        position: absolute;
+        z-index: -10;
+        bottom: -40px;
+        right: 230px;
+        width: auto;
+    }
+
+    .img-front {
+        position: absolute;
+        z-index: -5;
+        bottom: -60px;
+        right: 0;
+        width: auto;
     }
 }
+
+
 
 #brands {
     padding-top: 4rem;
@@ -294,14 +298,13 @@ gap: 1rem;
 }
 
 
-
 #pagetwo {
-
     .container { 
         display: grid;
         grid-template-columns: 2fr 3fr;
         padding-top: 4rem;
         padding-bottom: 5rem;
+    }
 }
 
 .features-text {
@@ -325,6 +328,7 @@ gap: 1rem;
     gap: 3rem;
     margin-top: 1rem;
 }
+
 .feature {
     display: flex;
     align-items: flex-start;
@@ -349,9 +353,8 @@ gap: 1rem;
         color: var(--color-grey700);
         font-size: 16px;
     }
+}
 
-}
-}
 
 #pagethree {
     background-color: var(--color-grey100);
@@ -380,21 +383,21 @@ gap: 1rem;
        color: var(--color-grey700);
        font-size: 16px; 
     }
+}
 
-    .carousel {
-        grid-area: "carousel";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-    }
+.carousel {
+    grid-area: "carousel";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
 
-    .undercarousel {
-        grid-template-areas: "undercarousel";
-        text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 4rem;
-    }
+.undercarousel {
+    grid-template-areas: "undercarousel";
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
 }
 
 #pagefour {
@@ -412,18 +415,15 @@ gap: 1rem;
         font-weight: 800;
     }
 
-    .moneytransfertext {
-        grid-area: "moneytransfer";
+   .btn-primary {
+    gap: 0.5rem;
+   }
+   
+    a {
+        width: 40%;
+        margin-top: 2rem;
     }
 
-.checkmark {
-    margin-right: 0.5rem;
-}
-
-a {
-    width: 40%;
-    margin-top: 2rem;
-}
     ul {
         list-style: none;
         padding-left: 0;        
@@ -432,171 +432,126 @@ a {
             padding-left: 0; 
         }
    }
+}
 
-   .btn-primary {
-    gap: 0.5rem;
-   }
+.checkmark {
+    margin-right: 0.5rem;
+}
 
-    .imagestransfer {
-        grid-area: "imagestransfer";        
-        position: relative;
+.moneytransfertext {
+    grid-area: "moneytransfer";
+}
 
-        .imageback {
-            position: absolute;
-            z-index: -10;
-            left: -10px;
-        }
-        .imagefront {
-            position: absolute;
-            z-index: -5;
-            bottom: -30%;
-            right: 15%;
-        }
+.imagestransfer {
+    grid-area: "imagestransfer";        
+    position: relative;
+
+    .imageback {
+        position: absolute;
+        z-index: -10;
+        left: -10px;
     }
-
-    .imagespayment {
-        grid-area: "imagespayment";
-        position: relative;
-
-        .imageback {
-            position: absolute;
-            z-index: -10;
-        }
-
-        .imagefront {
-            position: absolute;
-            z-index: -5;
-            left: 40%;
-            top: 30%;
-        }
-    }
-
-    .moneypaymenttext {
-        grid-area: "moneypaymenttext";
-
-        a {
-            margin-top: 3rem;
-        }
-    }
-
-    .features {
-        display: flex;
-        gap: 2rem;    
-    }
-
-    .featurebox {
-        .icon {
-            background-color: hsl(240, 48%, 95%);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
+    .imagefront {
+        position: absolute;
+        z-index: -5;
+        bottom: -30%;
+        right: 15%;
     }
 }
+
+.imagespayment {
+    grid-area: "imagespayment";
+    position: relative;
+
+    .imageback {
+        position: absolute;
+        z-index: -10;
+    }
+
+    .imagefront {
+        position: absolute;
+        z-index: -5;
+        left: 40%;
+        top: 30%;
+    }
+}
+
+.moneypaymenttext {
+    grid-area: "moneypaymenttext";
+
+    a {
+        margin-top: 3rem;
+    }
+}
+
+.features {
+    display: flex;
+    gap: 2rem;    
+}
+
+.featurebox .icon{
+    margin-bottom: 1rem;
+}
+
 
 #pagefive {
     background-color: var(--color-grey100);
     padding: 5rem 0;
 
     .container {
-        max-width: 1400px;
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 4rem;
     }
-
-    .headtext {
-        font-size: 35px;
-        font-weight: 800;
-    }
-
-    .reviews {
-        display: flex;
-        gap: 2rem;
-    }
-
-    .reviewbox {
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 1rem;
-        position: relative;
-        color: var(--color-grey700);
-        font-size: 18px;
-
-        .quotes {
-            position: absolute;
-            top: -20px;
-        }
-
-        .ratings {
-            padding-top: 2rem;
-            padding-bottom: 0.5rem;
-        }
-    }
-
-    .clientinfo {
-        display: flex;
-        gap: 1rem;
-        padding-top: 1rem;
-
-
-    }        
-    .clientrating {
-            color: var(--color-grey600);
-            padding-bottom: 1rem;
-        }
-
-        .clientname {
-            font-weight: 700;
-            color: var(--color-grey900);
-        }
-
-        .clientrole {
-            color: var(--color-grey600);
-            font-size: 14px;
-        }
+}
+.headtext {
+    font-size: 35px;
+    font-weight: 800;
 }
 
-#subscribe {
-    background-color: var(--color-grey100);
-
-    .container { 
-    max-width: 1300px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 5rem;
-     padding: 5rem;
-     margin: auto;
-}
-     p {
-        font-size: 24px;
-        color: var(--color-grey900);
-        font-weight: 800;
-     }
-
-     .emailtosub {
-        display: flex;
-        padding: 0 3rem;
-     }
-    
-    .form-input {
-        width: 300px;
-        font-size: 16px;
-        padding: 0.6em;
-        border-radius: 0.5em 0em 0em 0.5em;
-        border: 1px solid var(--color-grey400);
-        &:focus {
-            outline: none;
-        }
+.reviews {
+    display: flex;
+    gap: 2rem;
 }
 
-.btn-primary {
-    border: none;
-    border-radius: 0em 0.5em 0.5em 0em;
-    font-size: 16px;
-    font-weight: 500;
+.reviewbox {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+    color: var(--color-grey700);
+    font-size: 18px;
 }
+
+.reviewbox .ratings {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.reviewbox .quotes {
+    position: absolute;
+    top: -20px;
+}
+
+.clientinfo {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}       
+
+.clientrating {
+    color: var(--color-grey600);
+    padding-bottom: 1rem;
+}
+
+.clientname {
+    font-weight: 700;
+    color: var(--color-grey900);
+}
+
+.clientrole {
+    color: var(--color-grey600);
+    font-size: 14px;
 }
 
 #FAQ {
@@ -642,15 +597,16 @@ a {
     gap: 2rem;
     font-size: 14px;
     color: var(--color-grey700);    
+
     p {
         font-size: 18px;
         color: var(--color-grey700);
     }
+
     a {
         font-size: 14px;
         font-weight: 600;
     }
-
 }
 
 .contactcall {
@@ -659,6 +615,7 @@ a {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
+
     a {
         display: flex;
         align-items: center;
@@ -695,7 +652,7 @@ a {
     margin: 1rem;
     font-size: 16px;
     font-weight: 600;
-    /* color: var(--color-grey900); */
+
     a {
         color: var(--color-grey900);
         text-decoration: none;
@@ -716,10 +673,7 @@ a {
     width: 100%;
 }
 
-
-
 .answer {
-        /* display: none; */
         position: relative;
         max-height: 0;
         overflow: hidden;
@@ -738,7 +692,6 @@ a {
     transform: translateY(-50%);
 }
 
-
 .answer p {
     font-size: 14px;
     color: var(--color-grey700);
@@ -756,6 +709,70 @@ a {
     display: block;
 }
 
+
+
+#subscribe {
+    background-color: var(--color-grey100);
+
+    .container { 
+    max-width: 1300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 5rem;
+     padding: 5rem;
+     margin: auto;
+    }
+
+     p {
+        font-size: 24px;
+        color: var(--color-grey900);
+        font-weight: 800;
+    }
+
+    .btn-primary {
+        border: none;
+        border-radius: 0em 0.5em 0.5em 0em;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+.emailtosub {
+display: flex;
+padding: 0 3rem;
+position: relative;
+}
+    
+.form-input {
+    width: 300px;
+    font-size: 16px;
+    padding: 0.6em;
+    border-radius: 0.5em 0em 0em 0.5em;
+    border: 1px solid var(--color-grey400);
+    color: var(--color-grey500);
+
+    /* använd fot-family fontawesome om du använder unicode (&#xf0e0; ) för envelope */
+    /* font-family: sans-serif, FontAwesome; */
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.emailtosub .envelope {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+
+    transform: translateY(-50%);
+
+}
+
+#email {
+    padding-left: 2.5rem;
+}
 
 footer {
     font-size: 14px;
