@@ -24,16 +24,35 @@ body, section, div, header, footer, main, aside, nav, blockquote, p, span {
     padding: 0;
 }
 
+input, button, textarea, select {
+    font: inherit;
+}
+
 body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.wrapper {
-    height: 100vh;
+p, li {
+    color: var(--color-grey700);
+}
+
+.text-L {
+    font-size: 1.12rem;
+    color: var(--color-grey700);
+}
+
+.text-S {
+    font-size: .87rem;
+    color: var(--color-grey700);
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    color: var(--color-grey900);
 }
 
 .grad {
@@ -87,6 +106,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-size: .87rem;
 }
 
 .btn-primary:hover {
@@ -98,6 +118,7 @@ a:hover {
 .btn-primary i {
     margin-right: 0.5rem;
 }
+
  /* googleplay / appstore knapparna */
 
  .btn-download-app {
@@ -119,7 +140,6 @@ a:hover {
 
  /* slut googleplay / appstore knappar */
 
-
 /* discover-more rund knapp */
 
 .btn-circle {
@@ -134,9 +154,6 @@ a:hover {
 }
 
 /* slut discover-more rund knapp */
-
-
-
 
 /* start darkmode-toggle */
 
@@ -188,7 +205,6 @@ gap: 1rem;
     aspect-ratio: 1;
     background-color: var(--color-white);
     border-radius: 50%;
-
     transition: all 400ms;
 
     }
@@ -203,10 +219,8 @@ gap: 1rem;
         background-color: hsl(from var(--color-primary) h calc(s /2) calc(l + 15 ));
     }
 }
+
 /* slut på darkmode-toggle */
-
-
-
 
 #hero {
     overflow: hidden;
@@ -223,12 +237,10 @@ gap: 1rem;
     grid-area: content;
 
         h1 {
-            font-size: 56px;
-            font-weight: 800;
+            font-size: 3.5rem;
         }
 
         p {
-            font-size: 18px;
             margin-bottom: 2rem;
         }
     }
@@ -240,19 +252,22 @@ gap: 1rem;
 }
 
 .discover-more {
-    color: var(--color-grey700);
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-top: 10rem;
     margin-bottom: 4rem;
+
+    span:hover {
+        color: var(--color-primary);
+    }
 }
 
 .content a {
     text-decoration: none;
 }
 
-.images {
+.images { 
     grid-area: images;
     position: relative;
 
@@ -261,7 +276,6 @@ gap: 1rem;
         z-index: -10;
         bottom: -40px;
         right: 230px;
-        width: auto;
     }
 
     .img-front {
@@ -269,11 +283,8 @@ gap: 1rem;
         z-index: -5;
         bottom: -60px;
         right: 0;
-        width: auto;
     }
 }
-
-
 
 #brands {
     padding-top: 4rem;
@@ -290,13 +301,12 @@ gap: 1rem;
 .brand-box {
     border: 1px solid var(--color-grey300);
     border-radius: 8px;
-    height: 80px;
-    width: 200px;
+    height: 5rem;
+    width: 12.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 #pagetwo {
     .container { 
@@ -309,14 +319,12 @@ gap: 1rem;
 
 .features-text {
     h1 {
-        font-size: 40px;
-        font-weight: 800;
+        font-size: 2.5rem;
         margin-top: 0;
         margin-bottom: 1rem;
     }
 
     p {
-        font-size: 18px;
         color: var(--color-grey600);
         padding-bottom: 3rem;
     }
@@ -336,25 +344,18 @@ gap: 1rem;
 }
 
 .icon {
-    background-color: hsl(240, 48%, 95%);
+    background-color: hsla(239, 84%, 67%, 0.08);
     padding: 1em;
-    border-radius: 8px;
+    border-radius: .5rem;
 }
 
 .featurestext {
-    h5 {
+    h2 {
         margin-top: 0;
         margin-bottom: 1rem;
-        font-size: 20px;
-        font-weight: 800;
-    }
-
-    p {
-        color: var(--color-grey700);
-        font-size: 16px;
+        font-size: 1.25rem;
     }
 }
-
 
 #pagethree {
     background-color: var(--color-grey100);
@@ -368,20 +369,12 @@ gap: 1rem;
         grid-template-areas: "heading";
         text-align: center;
         padding: 3rem;
-        font-size: 40px;
-        font-weight: 800;
-        color: var(--color-grey900);
+        font-size: 2.5rem;
     }
 
-    h4 {
-        font-size: 24px;
-        font-weight: 800;
+    h2 {
+        font-size: 1.5rem;
         margin-bottom: 1rem;
-    }
-
-    p {
-       color: var(--color-grey700);
-       font-size: 16px; 
     }
 }
 
@@ -406,13 +399,12 @@ gap: 1rem;
     grid-template-areas:    "moneytransfer imagestransfer"
                             "imagespayment moneypaymenttext";
     padding: 7rem;
-    gap: 10rem;
-    margin-bottom: 3rem;
+    gap: 5rem;
+    margin-bottom: 2rem;
     }
 
     h2 {
-        font-size: 32px;
-        font-weight: 800;
+        font-size: 2rem;
     }
 
    .btn-primary {
@@ -420,7 +412,7 @@ gap: 1rem;
    }
    
     a {
-        width: 40%;
+        width: 30%;
         margin-top: 2rem;
     }
 
@@ -430,6 +422,8 @@ gap: 1rem;
         li {
             padding: 0.5rem; 
             padding-left: 0; 
+            display: flex;
+            align-items: center;
         }
    }
 }
@@ -440,48 +434,22 @@ gap: 1rem;
 
 .moneytransfertext {
     grid-area: "moneytransfer";
+    padding-top: 2rem;
 }
 
 .imagestransfer {
     grid-area: "imagestransfer";        
     position: relative;
-
-    .imageback {
-        position: absolute;
-        z-index: -10;
-        left: -10px;
-    }
-    .imagefront {
-        position: absolute;
-        z-index: -5;
-        bottom: -30%;
-        right: 15%;
-    }
 }
 
 .imagespayment {
     grid-area: "imagespayment";
     position: relative;
-
-    .imageback {
-        position: absolute;
-        z-index: -10;
-    }
-
-    .imagefront {
-        position: absolute;
-        z-index: -5;
-        left: 40%;
-        top: 30%;
-    }
 }
 
 .moneypaymenttext {
     grid-area: "moneypaymenttext";
-
-    a {
-        margin-top: 3rem;
-    }
+    padding-top: 2rem;
 }
 
 .features {
@@ -493,7 +461,6 @@ gap: 1rem;
     margin-bottom: 1rem;
 }
 
-
 #pagefive {
     background-color: var(--color-grey100);
     padding: 5rem 0;
@@ -504,9 +471,9 @@ gap: 1rem;
         gap: 4rem;
     }
 }
+
 .headtext {
-    font-size: 35px;
-    font-weight: 800;
+    font-size: 2rem;
 }
 
 .reviews {
@@ -516,11 +483,9 @@ gap: 1rem;
 
 .reviewbox {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: .5rem;
     padding: 1rem;
     position: relative;
-    color: var(--color-grey700);
-    font-size: 18px;
 }
 
 .reviewbox .ratings {
@@ -551,7 +516,6 @@ gap: 1rem;
 
 .clientrole {
     color: var(--color-grey600);
-    font-size: 14px;
 }
 
 #FAQ {
@@ -560,20 +524,13 @@ gap: 1rem;
     justify-content: space-between;
     padding: 3rem 0;
     h2 {
-        font-size: 32px;
-        font-weight: 800;
-        color: var(--color-grey900);
+        font-size: 2rem;
     }
 }
 
 .btn-circle {
     height: 36px;
     width: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    padding: 1rem;
     border: none;
     cursor: pointer;
     background-color: var(--color-grey100);
@@ -598,13 +555,8 @@ gap: 1rem;
     font-size: 14px;
     color: var(--color-grey700);    
 
-    p {
-        font-size: 18px;
-        color: var(--color-grey700);
-    }
-
     a {
-        font-size: 14px;
+        font-size: .87rem;
         font-weight: 600;
     }
 }
@@ -650,14 +602,12 @@ gap: 1rem;
     border: 1px solid var(--color-grey100);
     padding: 1rem;
     margin: 1rem;
-    font-size: 16px;
-    font-weight: 600;
+    box-shadow: 0 1px 2px #33333323;
 
     a {
         color: var(--color-grey900);
         text-decoration: none;
-        font-size: 16px;
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 
@@ -677,8 +627,6 @@ gap: 1rem;
         position: relative;
         max-height: 0;
         overflow: hidden;
-        color: var(--color-grey700);
-        font-size: 14px;
         transition: max-height 550ms;
         }
     
@@ -690,11 +638,6 @@ gap: 1rem;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-}
-
-.answer p {
-    font-size: 14px;
-    color: var(--color-grey700);
 }
 
 .accordion-item:target .answer {
@@ -709,31 +652,27 @@ gap: 1rem;
     display: block;
 }
 
-
-
 #subscribe {
     background-color: var(--color-grey100);
 
     .container { 
-    max-width: 1300px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 5rem;
-     padding: 5rem;
-     margin: auto;
+        max-width: 1300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        padding: 5rem;
+        margin: auto;
     }
 
-     p {
-        font-size: 24px;
-        color: var(--color-grey900);
-        font-weight: 800;
+     h2 {
+        font-size: 1.5rem;
     }
 
     .btn-primary {
         border: none;
         border-radius: 0em 0.5em 0.5em 0em;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
         cursor: pointer;
     }
@@ -746,15 +685,11 @@ position: relative;
 }
     
 .form-input {
-    width: 300px;
-    font-size: 16px;
+    width: 18.75rem;
     padding: 0.6em;
     border-radius: 0.5em 0em 0em 0.5em;
     border: 1px solid var(--color-grey400);
     color: var(--color-grey500);
-
-    /* använd font-family fontawesome om du använder unicode (&#xf0e0; ) för envelope */
-    /* font-family: sans-serif, FontAwesome; */
 
     &:focus {
         outline: none;
@@ -775,7 +710,6 @@ position: relative;
 }
 
 footer {
-    font-size: 14px;
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: var(--color-grey600);
